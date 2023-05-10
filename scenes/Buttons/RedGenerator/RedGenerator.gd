@@ -1,5 +1,5 @@
 extends TextureButton
-
+@onready var bloqueRojo = preload("res://scenes/Blocks/Red/BlockRed.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,6 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_button_down():
-	pass # Replace with function body.
+	generate_block()
+
+func generate_block():
+	bloqueRojo.instantiate()
